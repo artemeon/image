@@ -8,9 +8,17 @@
     "require": {
         "php": ">=7.0"
     },
+    "require-dev": {
+        "phpunit/phpunit": "^6.0"
+    },
     "autoload": {
         "psr-4": {
-            "Artemeon\\Image\\": ""
+            "Artemeon\\Image\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Artemeon\\Image\\Tests\\": "tests"
         }
     }
 }
