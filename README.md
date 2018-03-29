@@ -9,7 +9,7 @@ performed when a cached version is available.
  
 Example:
 ```php
-$image = new Image2();
+$image = new Image();
 $image->load("/files/images/samples/PA252134.JPG");
  
 // Scale and crop the image so it is exactly 800  600 pixels large.
