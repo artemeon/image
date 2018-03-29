@@ -1,0 +1,16 @@
+{
+    "name": "artemeon/image",
+    "type": "library",
+    "description": "Simple image manipulation",
+    "keywords": ["image", "manipulation"],
+    "homepage": "http://kajona.de",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Artemeon\\Image\\": ""
+        }
+    }
+}
