@@ -127,6 +127,7 @@ class Image
      * Set whether caching is enabled (default) or disabled.
      *
      * @param bool $useCache
+     * @param string|null $cachePath
      * @return void
      */
     public function setUseCache($useCache, $cachePath = null)
@@ -493,7 +494,7 @@ class Image
      */
     private function getCachePath($format)
     {
-        return $this->cachePath."c".$this->cacheId.".".$format;;
+        return $this->cachePath."c".$this->cacheId.".".$format;
     }
 
     /**
@@ -561,16 +562,14 @@ class Image
 
             return $arrColor;
         } // Decimal RGB, e.g. rgb(255, 0, 16)
-        elseif (preg_match("/rgb\\(\\s*(\\d{1,3})\\s*,\\s*(\\d{1,3})\\s*,\\s*(\\d{1,3})\\s*\\)/i", $color,
-            $arrMatches)) {
+        elseif (preg_match("/rgb\\(\\s*(\\d{1,3})\\s*,\\s*(\\d{1,3})\\s*,\\s*(\\d{1,3})\\s*\\)/i", $color, $arrMatches)) {
             $intRed = min((int)$arrMatches[1], 255);
             $intGreen = min((int)$arrMatches[2], 255);
             $intBlue = min((int)$arrMatches[3], 255);
             $arrColor = array($intRed, $intGreen, $intBlue);
             return $arrColor;
         } // Decimal RGBA, e.g. rgba(255, 0, 16, 0.8)
-        elseif (preg_match("/rgba\\(\\s*(\\d{1,3})\\s*,\\s*(\\d{1,3})\\s*,\\s*(\\d{1,3})\\s*,\\s*(\\d+(\\.\\d+)?)\\s*\\)/i",
-            $color, $arrMatches)) {
+        elseif (preg_match("/rgba\\(\\s*(\\d{1,3})\\s*,\\s*(\\d{1,3})\\s*,\\s*(\\d{1,3})\\s*,\\s*(\\d+(\\.\\d+)?)\\s*\\)/i", $color, $arrMatches)) {
             $intRed = min((int)$arrMatches[1], 255);
             $intGreen = min((int)$arrMatches[2], 255);
             $intBlue = min((int)$arrMatches[3], 255);
