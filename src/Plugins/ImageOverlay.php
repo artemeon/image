@@ -8,14 +8,14 @@
 
 namespace Artemeon\Image\Plugins;
 
-use Artemeon\Image\Image2;
+use Artemeon\Image\Image;
 
 /**
  */
 class ImageOverlay extends ImageAbstractOperation
 {
     /**
-     * @var Image2
+     * @var Image
      */
     private $objImage;
     private $intX;
@@ -23,12 +23,12 @@ class ImageOverlay extends ImageAbstractOperation
     private $bitAlphaBlending;
 
     /**
-     * @param Image2 $objImage
+     * @param Image $objImage
      * @param int $intX
      * @param int $intY
      * @param bool $bitAlphaBlending
      */
-    public function __construct(Image2 $objImage, $intX, $intY, $bitAlphaBlending = true)
+    public function __construct(Image $objImage, $intX, $intY, $bitAlphaBlending = true)
     {
         $this->objImage = $objImage;
         $this->intX = $intX;

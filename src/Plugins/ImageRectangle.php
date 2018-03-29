@@ -8,7 +8,7 @@
 
 namespace Artemeon\Image\Plugins;
 
-use Artemeon\Image\Image2;
+use Artemeon\Image\Image;
 
 /**
  * Implements an operation to draw a rectangle
@@ -32,7 +32,7 @@ class ImageRectangle extends ImageAbstractOperation
     {
         $this->intX = $intX;
         $this->intY = $intY;
-        $this->arrColor = Image2::parseColorRgb($strColor);
+        $this->arrColor = Image::parseColorRgb($strColor);
         $this->intWidth = $intWidth;
         $this->intHeight = $intHeight;
     }

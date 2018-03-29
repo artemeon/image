@@ -10,7 +10,7 @@
 
 namespace Artemeon\Image\Plugins;
 
-use Artemeon\Image\Image2;
+use Artemeon\Image\Image;
 
 /**
  * Implements a text rendering operation.
@@ -40,7 +40,7 @@ class ImageText extends ImageAbstractOperation
         $this->intX = $intX;
         $this->intY = $intY;
         $this->floatSize = $floatSize;
-        $this->arrColor = Image2::parseColorRgb($strColor);
+        $this->arrColor = Image::parseColorRgb($strColor);
         $this->strFont = $strFont;
         $this->floatAngle = $floatAngle;
     }

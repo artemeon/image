@@ -10,7 +10,7 @@
 
 namespace Artemeon\Image\Plugins;
 
-use Artemeon\Image\Image2;
+use Artemeon\Image\Image;
 
 /**
  * Implements an image rotation operation.
@@ -27,7 +27,7 @@ class ImageRotate extends ImageAbstractOperation
     public function __construct($floatAngle, $strColor = "#000000")
     {
         $this->floatAngle = $floatAngle;
-        $this->arrColor = Image2::parseColorRgb($strColor);
+        $this->arrColor = Image::parseColorRgb($strColor);
     }
 
     /**

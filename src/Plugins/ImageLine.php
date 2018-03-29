@@ -8,7 +8,7 @@
 
 namespace Artemeon\Image\Plugins;
 
-use Artemeon\Image\Image2;
+use Artemeon\Image\Image;
 
 /**
  * Implements an operation to draw a line
@@ -34,7 +34,7 @@ class ImageLine extends ImageAbstractOperation
     {
         $this->intStartX = $intStartX;
         $this->intStartY = $intStartY;
-        $this->arrColor = Image2::parseColorRgb($strColor);
+        $this->arrColor = Image::parseColorRgb($strColor);
         $this->intEndX = $intEndX;
         $this->intEndY = $intEndY;
     }
