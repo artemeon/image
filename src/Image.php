@@ -277,10 +277,10 @@ class Image
         $contentType = null;
         switch ($format) {
             case self::FORMAT_PNG:
-                $contentType = "image/jpeg";
+                $contentType = "image/png";
                 break;
             case self::FORMAT_JPG:
-                $contentType = "image/png";
+                $contentType = "image/jpeg";
                 break;
             case self::FORMAT_GIF:
                 $contentType = "image/gif";
